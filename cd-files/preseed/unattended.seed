@@ -3,6 +3,14 @@ unknown debconf/priority string critical
 d-i debconf/priority string critical
 d-i debian-installer/locale string en_US
 d-i console-tools/archs select at
+
+# Keyboard selection.
+# Disable automatic (interactive) keymap detection.
+d-i console-setup/ask_detect boolean false
+#d-i keyboard-configuration/modelcode string pc105
+d-i keyboard-configuration/layoutcode string us
+
+#keymap
 d-i console-keymaps-at/keymap select us
 
 d-i netcfg/choose_interface select auto
