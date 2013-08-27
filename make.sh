@@ -31,6 +31,12 @@ function main {
               -boot-load-size 4 -boot-info-table \
               -o $IMAGE $BUILD
   cd -
+
+  #delete writable place
+  rm -rf $BUILD
+
+  #unmount image
+  umount $MOUNTIMAGE
 }
 
 function scriptdir {
