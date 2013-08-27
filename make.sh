@@ -2,7 +2,7 @@
 
 function initialize {
   BUILD=/tmp/custom-cd/
-  IMAGE=/vagrant/custom.iso
+  IMAGE=/tmp/custom.iso
   MOUNTIMAGE=/tmp/custom-cd-source
   HERE=`scriptdir`
   STARTINGDIR=`pwd`
