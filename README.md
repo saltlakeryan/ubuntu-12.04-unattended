@@ -1,28 +1,37 @@
 Create (Mostly) Unattended Install of UBUNTU
 ====
-Customize cd-files/ks.cfg according to your needs.
 
-Create CD image with:
+Create an ubuntu install CD or USB with minimal interaction needed.
+This uses the ubuntu-server version of the install ISO.
 
-     ./make.sh path_to_ubuntu_cd_.iso
 
-Which creates /tmp/custom.iso
+Usage
+---
+1. Customize cd-files/ks.cfg according to your needs.
 
-The image can then be burned to disc
+2. Create CD image with:
 
-If you have unetbootin, you can then run 
+     sudo ./make.sh path_to_ubuntu_server_cd_.iso
 
-     ./unetbootin-to-stick.sh
+   Which creates /tmp/custom.iso
 
-to copy the iso file to /dev/sdb
+3. Burn the image to disc, or 
+
+4. Optionally, use unetbootin to copy image to usb
+
+    If you have unetbootin, you can then run 
+
+       ./unetbootin-to-stick.sh /dev/sdb
+
+    to copy the iso file to /dev/sdb
 
 
 Requirements
 ---
 I built and tested this from an ubuntu machine, though it may work on other linux distros.
 It uses mkisofs, so you may want to "apt-get install mkisofs".  It creates some big temp files
-so you'll need a couple of gigs of free space for that.
-
+so you'll need a couple of gigs of free space for that.  You will need to start with an ubuntu
+server iso file. Tested with ubuntu server 12.04 iso.
 
 
 Reference
