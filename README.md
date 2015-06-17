@@ -17,6 +17,14 @@ If you have unetbootin, you can then run
 to copy the iso file to /dev/sdb
 
 
+Requirements
+---
+I built and tested this from an ubuntu machine, though it may work on other linux distros.
+It uses mkisofs, so you may want to "apt-get install mkisofs".  It creates some big temp files
+so you'll need a couple of gigs of free space for that.
+
+
+
 Reference
 ----
 

@@ -1,15 +1,9 @@
 #!/bin/bash
 
-function initialize {
-  BUILD=/tmp/custom-cd/
-  IMAGE=/tmp/custom.iso
-  MOUNTIMAGE=/tmp/custom-cd-source
-  HERE=`scriptdir`
-  STARTINGDIR=`pwd`
-  ORIGINALIMAGE=$1
-}
+set -e
 
 function main {
+  check_params $1
   initialize $1
   #mount original image
   mkdir -p $MOUNTIMAGE
@@ -44,6 +38,26 @@ function scriptdir {
   SCRIPTPATH=`pwd -P`
   popd > /dev/null
   echo $SCRIPTPATH
+}
+
+function initialize {
+  BUILD=/tmp/custom-cd/
+  IMAGE=/tmp/custom.iso
+  MOUNTIMAGE=/tmp/custom-cd-source
+  HERE=`scriptdir`
+  STARTINGDIR=`pwd`
+  ORIGINALIMAGE=$1
+}
+
+function check_params {
+  if [ -z "$1" ]; then
+    echo requires path to ubuntu iso as first arg
+    exit 1
+  fi
+  if [ $(id -u) != "0" ]; then
+    echo must be root
+    exit 1
+  fi
 }
 
 main $1
