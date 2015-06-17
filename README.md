@@ -37,7 +37,7 @@ Requirements
 I built and tested this from an ubuntu machine, though it may work on other linux distros.
 It uses mkisofs, so you may want to "apt-get install mkisofs".  It creates some big temp files
 so you'll need a couple of gigs of free space for that.  You will need to start with an ubuntu
-server iso file. Tested with ubuntu server 12.04 iso.
+server iso file. Tested with ubuntu server 12.04 iso and ubuntu server 14.04 iso.
 
 
 Reference
