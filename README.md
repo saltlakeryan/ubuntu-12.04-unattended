@@ -4,6 +4,12 @@ Create (Mostly) Unattended Install of UBUNTU
 Create an ubuntu install CD or USB with minimal interaction needed.
 This uses the ubuntu-server version of the install ISO.
 
+Warning
+---
+If you use the .ISO that is generated with the default preseed files
+in this repo, that ISO will remove existing partitions and create
+new blank partitions on the installation target WITHOUT PROMPTING
+for input.  
 
 Usage
 ---
