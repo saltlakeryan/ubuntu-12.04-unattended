@@ -9,11 +9,11 @@ Warning
 If you use the .ISO that is generated with the default preseed files
 in this repo, that ISO will remove existing partitions and create
 new blank partitions on the installation target WITHOUT PROMPTING
-for input.  
+for input.
 
 Usage
 ---
-1. Customize cd-files/ks.cfg according to your needs.
+1. Customize cd-files/ks.cfg and cd-files/preseed/unattended.seed according to your needs.  You may want to change passwords especially.
 
 2. Create CD image with:
 
